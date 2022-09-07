@@ -6,7 +6,7 @@ import json
 g = geocoder.ip('me')
 lat, lng = g.latlng
 
-api_key = "insert your api here"
+api_key = "insert your api key here"
 link = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lng}&appid={api_key}&units=metric"
 response = requests.get(link).text
 response_info = json.loads(response)
